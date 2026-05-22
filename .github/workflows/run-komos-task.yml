@@ -1,0 +1,22 @@
+name: Run Komos Task
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 14 * * 1-5"
+
+jobs:
+  run-komos-task:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Queue Komos task run
+        env:
+          KOMOS_API_KEY: ${{ secrets.KOMOS_API_KEY }}
+          KOMOS_TASK_ID: ${{ vars.KOMOS_TASK_ID }}
+        run: |
+          curl --fail-with-body \
+            --request POST \
+            --header "Authorization: Bearer ${KOMOS_API_KEY}" \
+            --header "Content-Type: application/json" \
+            --data '{"inputs":{"source":"github-actions"},"clientRequestId":"github-actions-example"}' \
+            "https://api.komos.ai/public/v1/tasks/${KOMOS_TASK_ID}/runs"
