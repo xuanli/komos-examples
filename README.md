@@ -13,6 +13,7 @@ Komos is an AI automation platform for browser workflows, document parsing, inte
 | API introduction | https://docs.komos.ai/api-reference/introduction |
 | Queue a task run | https://docs.komos.ai/api-reference/task-runs/queue |
 | MCP server | https://docs.komos.ai/mcp-server |
+| Regulated operations examples page | https://xuanli.github.io/komos-examples/ |
 
 ## Examples
 

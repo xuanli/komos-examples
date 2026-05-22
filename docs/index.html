@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Komos regulated operations examples</title>
+    <meta
+      name="description"
+      content="Open examples for using Komos to automate regulated browser work across CRA, insurance, and banking operations."
+    >
+    <style>
+      :root {
+        color-scheme: light;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: #10231b;
+        background: #f7faf8;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      main {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 64px 24px;
+      }
+
+      header {
+        margin-bottom: 40px;
+      }
+
+      h1 {
+        max-width: 760px;
+        margin: 0 0 16px;
+        font-size: clamp(36px, 6vw, 64px);
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      p {
+        max-width: 720px;
+        color: #3f5f52;
+        font-size: 18px;
+        line-height: 1.65;
+      }
+
+      a {
+        color: #0f7a45;
+        font-weight: 650;
+      }
+
+      section {
+        border-top: 1px solid #dbe8e1;
+        padding: 28px 0;
+      }
+
+      h2 {
+        margin: 0 0 12px;
+        font-size: 24px;
+      }
+
+      ul {
+        padding-left: 20px;
+        color: #335244;
+        line-height: 1.8;
+      }
+
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .links a {
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid #bdd8c8;
+        border-radius: 8px;
+        padding: 10px 14px;
+        background: #ffffff;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Komos regulated operations examples</h1>
+        <p>
+          This public example set shows how teams can trigger Komos tasks from tools such as Pipedream, n8n,
+          Airtable, Vercel, Cloudflare Workers, LangChain, Python, and TypeScript.
+        </p>
+        <div class="links">
+          <a href="https://www.komos.ai/solutions/background-screening">Background screening automation</a>
+          <a href="https://www.komos.ai/use-cases/fcra-adverse-action-automation">FCRA adverse action automation</a>
+          <a href="https://www.komos.ai/use-cases/insurance-eligibility-verification">Insurance eligibility automation</a>
+          <a href="https://www.komos.ai/solutions/finance">Banking and finance operations</a>
+          <a href="https://docs.komos.ai/api-reference/task-runs/queue">Komos task run API</a>
+        </div>
+      </header>
+
+      <section>
+        <h2>CRA operations</h2>
+        <p>
+          The CRA example queues an adverse action workflow with applicant context, report identifiers,
+          jurisdiction data, and review metadata so the browser work can run with an audit trail.
+        </p>
+        <ul>
+          <li>Court portal checks.</li>
+          <li>FCRA notice preparation.</li>
+          <li>Reviewer handoff and status tracking.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Insurance operations</h2>
+        <p>
+          The insurance example sends payer, member, provider, and service date context into a Komos task for
+          eligibility verification when the carrier portal does not expose a clean API.
+        </p>
+        <ul>
+          <li>Eligibility and benefits portal checks.</li>
+          <li>Plan detail extraction.</li>
+          <li>Structured output for downstream claims teams.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Banking operations</h2>
+        <p>
+          The banking example shows how finance teams can queue reconciliation work against portals, statements,
+          and internal systems while preserving run logs and task outputs.
+        </p>
+        <ul>
+          <li>Statement reconciliation.</li>
+          <li>Exception review.</li>
+          <li>Auditable task history.</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
