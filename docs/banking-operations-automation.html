@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Banking operations automation examples with Komos</title>
+    <meta
+      name="description"
+      content="Example workflow for using Komos to automate bank portal operations, statement reconciliation, and regulated finance browser workflows."
+    >
+    <link rel="canonical" href="https://xuanli.github.io/komos-examples/banking-operations-automation.html">
+    <style>
+      :root {
+        color-scheme: light;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: #10231b;
+        background: #f7faf8;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      main {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 56px 24px;
+      }
+
+      h1 {
+        max-width: 760px;
+        margin: 0 0 16px;
+        font-size: clamp(34px, 5vw, 56px);
+        line-height: 1.05;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        margin: 0 0 12px;
+        font-size: 24px;
+      }
+
+      p,
+      li {
+        color: #3f5f52;
+        font-size: 18px;
+        line-height: 1.65;
+      }
+
+      section {
+        border-top: 1px solid #dbe8e1;
+        padding: 28px 0;
+      }
+
+      a {
+        color: #0f7a45;
+        font-weight: 650;
+      }
+
+      pre {
+        overflow-x: auto;
+        border: 1px solid #dbe8e1;
+        border-radius: 8px;
+        padding: 16px;
+        background: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p><a href="./">Back to examples</a></p>
+      <h1>Banking operations automation examples with Komos</h1>
+      <p>
+        Finance and banking operations teams often need to pull data from portals, reconcile statements, update
+        internal systems, and preserve review history. Komos can run those browser steps as task runs that are
+        triggered from internal tools, data pipelines, or ticket queues.
+      </p>
+
+      <section>
+        <h2>Workflow shape</h2>
+        <ul>
+          <li>Send account, statement, counterparty, date range, and review metadata into a Komos task.</li>
+          <li>Run browser portal steps with task logs, file downloads, retries, and human review where needed.</li>
+          <li>Return reconciliation status, exception notes, downloaded file references, and audit metadata.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Example input</h2>
+        <pre>{
+  "accountId": "acct_2048",
+  "statementMonth": "2026-04",
+  "counterparty": "Example Bank",
+  "reviewQueue": "exceptions",
+  "clientRequestId": "bank-rec-2048"
+}</pre>
+      </section>
+
+      <section>
+        <h2>Komos resources</h2>
+        <ul>
+          <li><a href="https://www.komos.ai/solutions/finance">Finance operations automation</a></li>
+          <li><a href="https://docs.komos.ai/api-reference/task-runs/queue">Queue a Komos task run</a></li>
+          <li><a href="https://github.com/xuanli/komos-examples/blob/main/regulated-ops/bank-statement-reconciliation.ts">TypeScript example</a></li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

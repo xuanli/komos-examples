@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CRA browser automation examples with Komos</title>
+    <meta
+      name="description"
+      content="Example workflow for using Komos to automate CRA and background screening browser operations with FCRA review, audit logs, and API triggers."
+    >
+    <link rel="canonical" href="https://xuanli.github.io/komos-examples/cra-browser-automation.html">
+    <style>
+      :root {
+        color-scheme: light;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: #10231b;
+        background: #f7faf8;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      main {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 56px 24px;
+      }
+
+      h1 {
+        max-width: 760px;
+        margin: 0 0 16px;
+        font-size: clamp(34px, 5vw, 56px);
+        line-height: 1.05;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        margin: 0 0 12px;
+        font-size: 24px;
+      }
+
+      p,
+      li {
+        color: #3f5f52;
+        font-size: 18px;
+        line-height: 1.65;
+      }
+
+      section {
+        border-top: 1px solid #dbe8e1;
+        padding: 28px 0;
+      }
+
+      a {
+        color: #0f7a45;
+        font-weight: 650;
+      }
+
+      pre {
+        overflow-x: auto;
+        border: 1px solid #dbe8e1;
+        border-radius: 8px;
+        padding: 16px;
+        background: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p><a href="./">Back to examples</a></p>
+      <h1>CRA browser automation examples with Komos</h1>
+      <p>
+        Consumer reporting agencies and background screening teams often need to work across court portals,
+        county systems, identity sources, and internal review queues. Komos turns those browser workflows into
+        repeatable task runs that can be queued from an API, scheduler, or case management system.
+      </p>
+
+      <section>
+        <h2>Workflow shape</h2>
+        <ul>
+          <li>Receive applicant, report, jurisdiction, and review metadata from a case system.</li>
+          <li>Run the browser workflow in Komos with saved credentials and task logs.</li>
+          <li>Return structured outputs for adjudication, adverse action, and quality review.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Example input</h2>
+        <pre>{
+  "applicantId": "app_48291",
+  "reportId": "rpt_2026_05_001",
+  "jurisdiction": "CA",
+  "reviewQueue": "pre_adverse_action",
+  "clientRequestId": "cra-case-48291"
+}</pre>
+      </section>
+
+      <section>
+        <h2>Komos resources</h2>
+        <ul>
+          <li><a href="https://www.komos.ai/solutions/background-screening">Background screening automation</a></li>
+          <li><a href="https://www.komos.ai/use-cases/fcra-adverse-action-automation">FCRA adverse action automation</a></li>
+          <li><a href="https://docs.komos.ai/api-reference/task-runs/queue">Queue a Komos task run</a></li>
+          <li><a href="https://github.com/xuanli/komos-examples/blob/main/regulated-ops/cra-adverse-action.ts">TypeScript example</a></li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

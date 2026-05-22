@@ -83,6 +83,30 @@
         background: #ffffff;
         text-decoration: none;
       }
+
+      .workflow-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+        margin-top: 20px;
+      }
+
+      .workflow-card {
+        border: 1px solid #dbe8e1;
+        border-radius: 8px;
+        padding: 18px;
+        background: #ffffff;
+      }
+
+      .workflow-card h3 {
+        margin: 0 0 8px;
+        font-size: 18px;
+      }
+
+      .workflow-card p {
+        margin: 0 0 12px;
+        font-size: 15px;
+      }
     </style>
   </head>
   <body>
@@ -113,6 +137,30 @@
           <li>FCRA notice preparation.</li>
           <li>Reviewer handoff and status tracking.</li>
         </ul>
+      </section>
+
+      <section>
+        <h2>Workflow pages</h2>
+        <p>
+          Each page maps a regulated browser workflow to a Komos API trigger and a production operations pattern.
+        </p>
+        <div class="workflow-grid">
+          <article class="workflow-card">
+            <h3>Background screening and CRA workflows</h3>
+            <p>Queue court portal checks, adverse action tasks, review handoff, and audit history.</p>
+            <a href="./cra-browser-automation.html">Open CRA workflow page</a>
+          </article>
+          <article class="workflow-card">
+            <h3>Insurance eligibility workflows</h3>
+            <p>Run payer portal eligibility checks with structured inputs and outputs for revenue teams.</p>
+            <a href="./insurance-eligibility-automation.html">Open insurance workflow page</a>
+          </article>
+          <article class="workflow-card">
+            <h3>Banking operations workflows</h3>
+            <p>Trigger statement reconciliation, exception handling, and portal updates from internal systems.</p>
+            <a href="./banking-operations-automation.html">Open banking workflow page</a>
+          </article>
+        </div>
       </section>
 
       <section>
