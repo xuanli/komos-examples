@@ -27,6 +27,8 @@ Komos is an AI automation platform for browser workflows, document parsing, inte
 | [`cloudflare-worker/src/index.ts`](cloudflare-worker/src/index.ts) | Cloudflare Worker endpoint that queues a Komos task. |
 | [`vercel/app/api/run-komos-task/route.ts`](vercel/app/api/run-komos-task/route.ts) | Vercel or Next.js route handler for task runs. |
 | [`langchain/komos_tool.py`](langchain/komos_tool.py) | LangChain compatible Python tool wrapper around the Komos API. |
+| [`regulated-ops/`](regulated-ops/) | CRA, insurance, and banking operations examples using real workflow shaped inputs. |
+| [`pipedream-components/components/komos/`](pipedream-components/components/komos/) | Pipedream registry shaped Komos app and actions. |
 
 ## Environment Variables
 
@@ -75,6 +77,18 @@ These examples are intentionally lightweight. They show how to hand off browser 
 | Cloudflare Workers | Expose a small API endpoint that queues Komos task runs. |
 | Vercel | Queue Komos tasks from an app backend or serverless route. |
 | LangChain | Give an agent a tool for dispatching a durable Komos task. |
+
+## Regulated Operations Recipes
+
+Komos is useful when an operations team has to run the same browser workflow repeatedly across portals that do not expose clean APIs. These examples focus on regulated workflows where auditability matters.
+
+| Workflow | Example | Related Komos page |
+| --- | --- | --- |
+| CRA adverse action | [`regulated-ops/cra-adverse-action.ts`](regulated-ops/cra-adverse-action.ts) | https://www.komos.ai/use-cases/fcra-adverse-action-automation |
+| Insurance eligibility verification | [`regulated-ops/insurance-eligibility.ts`](regulated-ops/insurance-eligibility.ts) | https://www.komos.ai/use-cases/insurance-eligibility-verification |
+| Bank statement reconciliation | [`regulated-ops/bank-statement-reconciliation.ts`](regulated-ops/bank-statement-reconciliation.ts) | https://www.komos.ai/solutions/finance |
+
+For background screening and CRA teams, see the Certn customer story at https://www.komos.ai/solutions/background-screening.
 
 ## Security
 
