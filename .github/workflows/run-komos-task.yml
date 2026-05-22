@@ -14,6 +14,11 @@ jobs:
           KOMOS_API_KEY: ${{ secrets.KOMOS_API_KEY }}
           KOMOS_TASK_ID: ${{ vars.KOMOS_TASK_ID }}
         run: |
+          if [ -z "${KOMOS_API_KEY}" ] || [ -z "${KOMOS_TASK_ID}" ]; then
+            echo "Skipping example run because KOMOS_API_KEY or KOMOS_TASK_ID is not configured."
+            exit 0
+          fi
+
           curl --fail-with-body \
             --request POST \
             --header "Authorization: Bearer ${KOMOS_API_KEY}" \
